@@ -1,0 +1,15 @@
+{
+  "epoch": 150,
+  "lr": 0.01,
+  "batch_size": 1,
+  "cuda_visible_devices": "0",
+  "device_ids": [0],
+  "train_image_path": "dataset/image_train",
+  "train_mask_path": "dataset/mask_train",
+  "valid_image_path": "dataset/image_valid",
+  "valid_mask_path": "dataset/mask_valid",
+  "model_save_path": "model_save/best_model.pth",
+  "valid_good_perform_times": 5,
+  "positive_weight": 5,
+  "negative_weight": 1
+}
