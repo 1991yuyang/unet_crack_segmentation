@@ -11,5 +11,6 @@
   "model_save_path": "model_save/best_model.pth",
   "valid_good_perform_times": 5,
   "positive_weight": 5,
-  "negative_weight": 1
+  "negative_weight": 1,
+  "is_attention": "True"
 }

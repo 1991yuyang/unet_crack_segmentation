@@ -22,12 +22,13 @@ def train():
     model_save_path = train_conf["model_save_path"]
     positive_weight = train_conf["positive_weight"]
     negative_weight = train_conf["negative_weight"]
+    is_attention = eval(train_conf["is_attention"])
     weight = t.tensor([negative_weight, positive_weight]).type(t.FloatTensor)
     batch_size = train_conf["batch_size"]
     epoch = train_conf["epoch"]
     lr = train_conf["lr"]
     device_ids = train_conf["device_ids"]
-    model = Unet(3, 2)
+    model = Unet(3, 2, is_attention)
     model = nn.DataParallel(module=model, device_ids=device_ids)
     model = model.cuda(device_ids[0])
     if os.path.exists(model_save_path):

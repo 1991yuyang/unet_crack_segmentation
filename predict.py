@@ -26,10 +26,10 @@ def predict(image_path):
 
 
 if __name__ == "__main__":
-    model = Unet(3, 2)
+    model = Unet(3, 2, True)  #
     model = nn.DataParallel(module=model, device_ids=[0])
     model = model.cuda(0)
     model.load_state_dict(t.load("./model_save/best_model.pth"))
     model.eval()
-    image_path = "./dataset/image_test/301.jpg"
+    image_path = "./dataset/image_test/320.jpg"
     predict(image_path)
