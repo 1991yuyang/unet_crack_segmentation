@@ -1,6 +1,6 @@
 # unet_crack_segmentation
 unet crack segmentation
-## Using Unet to segement the road cracks
+## Using Unet to segment the road cracks
 * ### configure
 > First, you need to configure the training parameters. The configuration file is train_conf.json. Some parameters are explained below.
   
